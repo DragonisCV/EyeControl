@@ -1,0 +1,103 @@
+
+augmentor_cfg: &AUG_CFG
+  seed: 628003
+  p_click: 0.5
+  p_stroke: 0.1
+  p_region: 0.4
+  out_soft: true
+  feather_prob: 0.9
+  soft_composite: "max"
+  # click
+  click_n_choices: [1, 2, 3, 4]
+  click_n_probs: [0.5, 0.3, 0.15, 0.05]
+  click_r_min: 0.006
+  click_r_max: 0.030
+  click_jitter_ratio: 0.01
+  click_sigma_mul_min: 0.6
+  click_sigma_mul_max: 1.5
+  click_cluster_near_ratio: 0.06
+  # stroke
+  stroke_use_points_prob: 0.8
+  stroke_n_choices: [2, 3, 4]
+  stroke_n_probs: [0.6, 0.3, 0.1]
+  stroke_w_min: 0.008
+  stroke_w_max: 0.040
+  stroke_jitter_ratio: 0.01
+  # region
+  region_r_min: 0.006
+  region_r_max: 0.040
+  region_erode_prob: 0.35
+  region_dropout_prob: 0.15
+  region_dropout_block_ratio: 0.03
+  region_sigma_min: 0.6
+  region_sigma_max: 3.0
+  return_debug: true
+train:
+  name: MixTrainCombinedDataset
+  datasets:
+    focus:
+        - FocusPortrait:
+            name: FocusDataset
+            json_path: /path/to/portrait.json
+            input_size: 1024
+            polarity: pos
+            caption_mode: glc
+            augmentor_cfg: *AUG_CFG
+        - FocusAnimals:
+            name: FocusDataset
+            json_path: /path/to/animals.json
+            input_size: 1024
+            polarity: pos
+            caption_mode: glc
+            augmentor_cfg: *AUG_CFG
+        - FocusArchitecture:
+            name: FocusDataset
+            json_path: /path/to/architecture.json
+            input_size: 1024
+            polarity: pos
+            caption_mode: glc
+            augmentor_cfg: *AUG_CFG
+        - FocusFood:
+            name: FocusDataset
+            json_path: /path/to/food.json
+            input_size: 1024
+            polarity: pos
+            caption_mode: glc
+            augmentor_cfg: *AUG_CFG
+        - FocusLandscape:
+            name: FocusDataset
+            json_path: /path/to/landscape.json
+            input_size: 1024
+            polarity: pos
+            caption_mode: glc
+            augmentor_cfg: *AUG_CFG
+        - FocusStreet:
+            name: FocusDataset
+            json_path: /path/to/street.json
+            input_size: 1024
+            polarity: pos
+            caption_mode: glc
+            augmentor_cfg: *AUG_CFG
+        - FocusNature:
+            name: FocusDataset
+            json_path: /path/to/nature.json
+            input_size: 1024
+            polarity: pos
+            caption_mode: glc
+            augmentor_cfg: *AUG_CFG   
+        - FocusNight:
+            name: FocusDataset
+            json_path: /path/to/night.json
+            input_size: 1024
+            polarity: pos
+            caption_mode: glc
+            augmentor_cfg: *AUG_CFG   
+    global:
+        - GlobalRetouching:
+            name: GlobalDataset
+            json_paths: /path/to/global.json
+    local:
+        - LocalRetouching:
+            name: LocalDataset
+            json_paths: /path/to/local.json
+            enlarge_ratio: 10
