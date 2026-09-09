@@ -11,7 +11,7 @@
   <a href="https://arxiv.org/abs/2609.01148">
     <img src="https://img.shields.io/badge/arXiv-Paper-B31B1B?style=for-the-badge&amp;logo=arxiv&amp;logoColor=white" alt="arXiv Paper" />
   </a>
-  <a href="#pretrained-models">
+  <a href="https://huggingface.co/Dragoniss/EyeControl/">
     <img src="https://img.shields.io/badge/Models-Coming%20Soon-FFD21E?style=for-the-badge&amp;logo=huggingface&amp;logoColor=FFD21E" alt="Pretrained models coming soon" />
   </a>
 </p>
