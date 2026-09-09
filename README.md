@@ -68,7 +68,7 @@ pip install -r requirements.txt
 | Model | Role | Availability / Local path |
 | --- | --- | --- |
 | FLUX.1 Kontext dev | Base model | [Hugging Face](https://huggingface.co/black-forest-labs/FLUX.1-Kontext-dev) → `pretrained/FLUX.1-Kontext-dev` |
-| EyeControl | Retouching checkpoint | [Hugging Face)](https://huggingface.co/Dragoniss/EyeControl/) → `pretrained/eyecontrol` |
+| EyeControl | Retouching checkpoint | [Hugging Face](https://huggingface.co/Dragoniss/EyeControl/) → `pretrained/eyecontrol` |
 
 Inference needs both the base model and an EyeControl checkpoint. Until pretrained checkpoints are released, use a checkpoint produced by your own training run.
 
