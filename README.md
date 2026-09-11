@@ -11,9 +11,12 @@
   <a href="https://arxiv.org/abs/2609.01148">
     <img src="https://img.shields.io/badge/arXiv-Paper-B31B1B?style=for-the-badge&amp;logo=arxiv&amp;logoColor=white" alt="arXiv Paper" />
   </a>
-<a href="https://huggingface.co/Dragoniss/EyeControl/">
-  <img src="https://img.shields.io/badge/Models-Hugging%20Face-FFD21E?style=for-the-badge&amp;logo=huggingface&amp;logoColor=FFD21E" alt="Pretrained models" />
-</a>
+  <a href="https://huggingface.co/Dragoniss/EyeControl/">
+    <img src="https://img.shields.io/badge/Models-Coming%20Soon-FFD21E?style=for-the-badge&amp;logo=huggingface&amp;logoColor=FFD21E" alt="Pretrained models" />
+  </a>
+  <a href="https://huggingface.co/datasets/Dragoniss/ControlArt-Bench/">
+    <img src="https://img.shields.io/badge/Dataset-ControlArt--Bench-2E8B57?style=for-the-badge&amp;logo=huggingface&amp;logoColor=FFD21E" alt="ControlArt-Bench dataset" />
+  </a>
 </p>
 
 <div align="center">
@@ -39,7 +42,7 @@ This repository provides the official PyTorch implementation of **EyeControl**, 
 ## 📝 TODO List
 
 - [x] Release inference and training code
-- [ ] Release ControlArt-Bench and pretrained models
+- [x] Release ControlArt-Bench and pretrained models
 - [ ] Release the data pipeline
 - [ ] Release a training subset 
 - [ ] Release online demo
@@ -68,7 +71,7 @@ pip install -r requirements.txt
 | Model | Role | Availability / Local path |
 | --- | --- | --- |
 | FLUX.1 Kontext dev | Base model | [Hugging Face](https://huggingface.co/black-forest-labs/FLUX.1-Kontext-dev) → `pretrained/FLUX.1-Kontext-dev` |
-| EyeControl | Retouching checkpoint | [Hugging Face](https://huggingface.co/Dragoniss/EyeControl/) → `pretrained/eyecontrol` |
+| EyeControl | Retouching checkpoint | [Hugging Face)](https://huggingface.co/Dragoniss/EyeControl/) → `pretrained/eyecontrol` |
 
 Inference needs both the base model and an EyeControl checkpoint. Until pretrained checkpoints are released, use a checkpoint produced by your own training run.
 
@@ -113,6 +116,10 @@ If you change the training schedule or output directory, update the checkpoint p
 
 <a id="evaluation"></a>
 ## 📈 Evaluation
+
+**ControlArt-Bench is now available on [Hugging Face 🤗](https://huggingface.co/datasets/Dragoniss/ControlArt-Bench/).**
+Download the benchmark and configure the dataset paths in the evaluation scripts
+before running inference and evaluation.
 
 After inference finishes, run the following scripts from the repository root:
 
