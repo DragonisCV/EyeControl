@@ -8,6 +8,9 @@
 
 <p align="center">
   <img src="https://img.shields.io/badge/ECCV-2026-3155A4?style=for-the-badge" alt="ECCV 2026" />
+  <a href="https://DragonisCV.github.io/projects/EyeControl/">
+    <img src="https://img.shields.io/badge/Homepage-EyeControl-B58A44?style=for-the-badge" alt="EyeControl homepage" />
+  </a>
   <a href="https://arxiv.org/abs/2609.01148">
     <img src="https://img.shields.io/badge/arXiv-Paper-B31B1B?style=for-the-badge&amp;logo=arxiv&amp;logoColor=white" alt="arXiv Paper" />
   </a>
@@ -42,7 +45,7 @@ This repository provides the official PyTorch implementation of **EyeControl**, 
 ## 📝 TODO List
 
 - [x] Release inference and training code
-- [x] Release ControlArt-Bench and pretrained models
+- [ ] Release ControlArt-Bench and pretrained models
 - [ ] Release the data pipeline
 - [ ] Release a training subset 
 - [ ] Release online demo
